@@ -4,9 +4,14 @@ php:
   - 5.4
   - hhvm
 script: phpunit Test.php
+
 deploy:
   - provider: s3
-      access_key_id: AKIAIK7JVD3QUWXWOYNA
-      secret_access_key: &1
-        secure: hie8kBuHyk1jdsTGWW3veVR76JRnXgYZwetvHzoNs8qyXhuIitrR1CdKhtPi6f3P8SR9m4he8mh1f2Y+AEBjMlu53WaF8BfaLK/UV347Kq3YmBSum7X1xPa00Ajq0mL6t6EfU9CO8HNZ3zlMPN3fyJklIYRMsyufK4icFjrgHTad6zyjPOc+vvyLAZZjAZsoS785HGyX1ch0nzV93RIE/8e+z5FptPeJ4TpFDArgjjyUGL9/Ege2kq53c4wLI8/0VTIF/aghbzgv5i46aOpf+h/DlWIiXlSJxJNAo4PDG2iofdIAYK7VuKGGS2TOqpauclkWAdqHgE9qRzkSqHrOG5/27K5JwJkDjLcy54knDe5ccDRugo7HK31/TuWazKzNcgWmi3fdyLpV3WCnmkoeCJOXMMogn6yjtDYjTGStT3ga+ue5wrLAbJL16OSJqJ/3l6igt0IS4ZPV28H/aM3oUJY6N/e2C9Q7YRtfVA5t5sdpHLNyXdRzWOJRGRR1Qkq59cCAB1EEomzGdD6GvOUw7ZUzB2pOcE4jg0VnNyLuJoS5e7pdjq+706in6kvi5P+5nHiZuXfQ3z7cFBvAv8dXPDqLawXjFdHIDguQJxbI0sElXRkHKc3mh830XYnjFM4oIL5As7cAqJaZdWaIoFI7QndTiifNL1W0/76xXiF2r7I=
-      bucket: injoytestdeployment
+    access_key_id: AKIAIK7JVD3QUWXWOYNA
+    secret_access_key: &1
+      secure: hie8kBuHyk1jdsTGWW3veVR76JRnXgYZwetvHzoNs8qyXhuIitrR1CdKhtPi6f3P8SR9m4he8mh1f2Y+AEBjMlu53WaF8BfaLK/UV347Kq3YmBSum7X1xPa00Ajq0mL6t6EfU9CO8HNZ3zlMPN3fyJklIYRMsyufK4icFjrgHTad6zyjPOc+vvyLAZZjAZsoS785HGyX1ch0nzV93RIE/8e+z5FptPeJ4TpFDArgjjyUGL9/Ege2kq53c4wLI8/0VTIF/aghbzgv5i46aOpf+h/DlWIiXlSJxJNAo4PDG2iofdIAYK7VuKGGS2TOqpauclkWAdqHgE9qRzkSqHrOG5/27K5JwJkDjLcy54knDe5ccDRugo7HK31/TuWazKzNcgWmi3fdyLpV3WCnmkoeCJOXMMogn6yjtDYjTGStT3ga+ue5wrLAbJL16OSJqJ/3l6igt0IS4ZPV28H/aM3oUJY6N/e2C9Q7YRtfVA5t5sdpHLNyXdRzWOJRGRR1Qkq59cCAB1EEomzGdD6GvOUw7ZUzB2pOcE4jg0VnNyLuJoS5e7pdjq+706in6kvi5P+5nHiZuXfQ3z7cFBvAv8dXPDqLawXjFdHIDguQJxbI0sElXRkHKc3mh830XYnjFM4oIL5As7cAqJaZdWaIoFI7QndTiifNL1W0/76xXiF2r7I=
+    local_dir: test
+    skip_cleanup: true
+    on: &2
+      repo: SyedSchoaib/travis-broken-example
+    bucket: injoytestdeployment
